@@ -1,0 +1,20 @@
+#
+#Save this file to $HOME/.local/share/systemd/user/xx-net.service
+#
+# Enable xx-net.service by 
+#  systemctl --user enable xx-net
+#  systemctl --user start xx-net
+#
+[Unit]
+Description=xx-net
+After=wicd.service
+
+[Service]
+#Type=idle
+ExecStart=/bin/bash ${HOME}/workspace/XX-Net/start.sh
+StandardOutput=null
+#StandardError=inherit
+#TTYPath=/dev/ptmx
+
+[Install]
+WantedBy=default.target
