@@ -456,7 +456,7 @@ awful.rules.rules = {
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true, tag = tags[1][4] } },
-    { rule = { class = "gimp" },
+    { rule = { class = "Gimp" },
       properties = { floating = true, tag = tags[1][4] } },
     { rule = { class = "Google-chrome-stable" },
       properties = { tag = tags[1][1] } },

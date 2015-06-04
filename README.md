@@ -1,5 +1,7 @@
 # dotfiles
 
+## Usage
+
 run with
     
     cd
@@ -24,3 +26,7 @@ Switch on single monitor with
 Swith on both the primary monitor and the extended monitor with
 
     extonmoni.sh
+
+## Screenshot
+
+![my screenshot](screenshot.png)
