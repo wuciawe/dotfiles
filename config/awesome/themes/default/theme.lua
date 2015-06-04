@@ -26,7 +26,7 @@ theme.fg_minimize   = "#ffffff"
 theme.fg_tooltip    = "#1a1a1a"
 theme.fg_em         = "#d6d6d6"
 
-theme.border_width  = "1"
+theme.border_width  = "3"
 theme.border_normal = "#000000"
 theme.border_focus  = "#3cbcfc"     --"#535d6c"
 theme.border_marked = "#91231c"
