@@ -27,6 +27,14 @@ Swith on both the primary monitor and the extended monitor with
 
     extonmoni.sh
 
+Import *.crt in Arch
+
+see the [link](https://www.archlinux.org/news/ca-certificates-update/)
+
+    mv path/to/*.crt /etc/ca-certificates/trust-source/anchors/*.crt
+    trust extract-compat
+
+
 ## Screenshot
 
 ![my screenshot](screenshot.png)
