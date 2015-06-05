@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="asoundrc profile Xdefaults zshrc bashrc vimrc xinitrc"    # list of files/folders to symlink in homedir
+files="asoundrc profile Xdefaults zshrc bashrc vimrc xinitrc tmux.conf"    # list of files/folders to symlink in homedir
 configfiles="awesome fontconfig ibus"
 
 ##########
@@ -20,6 +20,7 @@ if [ -d $olddir ]; then
 fi
 mkdir -p $olddir/local/share
 mkdir -p $olddir/config
+mkdir -p $olddir/vim
 echo "...done"
 
 # change to the dotfiles directory
@@ -37,15 +38,25 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+
+if [ ! -e ~/.config ]; then
+    echo "Creating ~/.config dir"
+    mkdir -p ~/.config
+fi
 for file in $configfiles; do
     if [ -e ~/.config/$file ]; then
-        ehco "Moving matched dotfile $file from ~/.config to $olddir/config"
+        echo "Moving matched dotfile $file from ~/.config to $olddir/config"
         mv ~/.config/$file $olddir/config/$file
     fi
     echo "Creating symlink to config/$file in ~/.config"
     ln -s $dir/config/$file ~/.config/$file
 done
 
+
+if [ ! -e ~/.local ]; then
+    echo "Creating ~/.local dir"
+    mkdir -p ~/.local
+fi
 if [ -e ~/.local/share/systemd ]; then
     echo "Moving ~/.local/share/systemd to $olddir/local/share"
     mv ~/.local/share/systemd $olddir/local/share/systemd
@@ -59,3 +70,15 @@ if [ -e ~/.local/bin ]; then
 fi
 echo "Creating symlink to local/bin in ~/.local"
 ln -s $dir/local/bin ~/.local/bin
+
+
+if [ ! -e ~/.vim ]; then
+    echo "Creaing ~/.vim dir"
+    mkdir -p ~/.vim
+fi
+if [ -e ~/.vim/colors ]; then
+    echo "Moving ~/.vim/colors to $olddir/vim"
+    mv ~/.vim/colors $olddir/vim/colors
+fi
+echo "Creating symlink to vim/colors in ~/.vim"
+ln -s $dir/vim/colors ~/.vim/colors
