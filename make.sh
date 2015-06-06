@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="asoundrc profile Xdefaults zshrc bashrc vimrc xinitrc tmux.conf"    # list of files/folders to symlink in homedir
-configfiles="awesome fontconfig ibus"
+configfiles="awesome fontconfig ibus powerline"
 
 ##########
 

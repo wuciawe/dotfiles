@@ -22,6 +22,8 @@ require('freedesktop.menu')
 vicious = require('vicious')
 local wi = require('wi')
 
+
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -95,17 +97,15 @@ tags = {
     names = {
 	'♨:1:Chrome',
 	'✇:2:IDE',
-	'⌘:3:Terminal',
+	'⌘:3:Tmux',
 	'⌥:4:Multimedia',
-	'☠:5:Editor',
         '✣:6:Others',
     },
     layout = {
 	layouts[5], --chrome
 	layouts[5], --ide
-	layouts[1], --terminal
+	layouts[5], --terminal
 	layouts[5], --multimedia
-	layouts[1], --editor
         layouts[1], --others
     }
 }

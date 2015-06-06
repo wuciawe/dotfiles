@@ -7,6 +7,5 @@ python3 powerline_setup()
 python3 del powerline_setup
 
 colorscheme zenburn
-
+set listchars=eol:¬,trail:~,extends:>,precedes:<,tab:→→,space:·
 set list
-set listchars=eol:�
