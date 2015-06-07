@@ -99,7 +99,7 @@ tags = {
 	'✇:2:IDE',
 	'⌘:3:Tmux',
 	'⌥:4:Multimedia',
-        '✣:6:Others',
+        '✣:5:Others',
     },
     layout = {
 	layouts[5], --chrome
