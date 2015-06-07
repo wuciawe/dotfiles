@@ -134,10 +134,13 @@ myawesomemenu = {
    { "restart", awesome.restart, freedesktop.utils.lookup_icon({icon = 'system-shutdown'}) },
    { "quit", awesome.quit, freedesktop.utils.lookup_icon({icon = 'system-shutdown'}) }
 }
-
+mysysmenu = {
+   { "reboot", "zsh -c -i 'reboot'"},
+   { "shutdown", "zsh -c -i 'shutdown'"}
+}
 table.insert(menu_items, {"Awesome", myawesomemenu, beautiful.awesome_icon})
 table.insert(menu_items, {"Open Terminal", terminal})
-
+table.insert(menu_items, {"sys", mysysmenu})
 mymainmenu = awful.menu({items = menu_items, width = 150})
 
 -- mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
