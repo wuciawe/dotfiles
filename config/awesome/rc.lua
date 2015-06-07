@@ -136,7 +136,7 @@ myawesomemenu = {
 }
 mysysmenu = {
    { "reboot", "zsh -c -i 'reboot'"},
-   { "shutdown", "zsh -c -i 'shutdown'"}
+   { "shutdown", "zsh -c -i 'poweroff'"}
 }
 table.insert(menu_items, {"Awesome", myawesomemenu, beautiful.awesome_icon})
 table.insert(menu_items, {"Open Terminal", terminal})
