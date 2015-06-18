@@ -255,11 +255,11 @@ for s = 1, screen.count() do
     myinfowibox[s] = awful.wibox({position = "bottom", screen = s})
     -- Widgets that are aligned to the bottom
     local bottom_left_layout = wibox.layout.fixed.horizontal()
-    bottom_left_layout:add(cpuicon)
-    bottom_left_layout:add(cpu)
-    bottom_left_layout:add(spacer)
     bottom_left_layout:add(memicon)
     bottom_left_layout:add(mem)
+    bottom_left_layout:add(spacer)
+    bottom_left_layout:add(cpuicon)
+    bottom_left_layout:add(cpu)
     bottom_left_layout:add(spacer)
 
     local bottom_right_layout = wibox.layout.fixed.horizontal()
