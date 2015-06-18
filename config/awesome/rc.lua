@@ -295,6 +295,7 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    awful.key({ modkey, "Mod1" }, "Tab", function () awful.screen.focus_relative(1) end),
     awful.key({ }, "Print", function () awful.util.spawn_with_shell("sleep 0.5 && scrot -s -e 'mv $f ~/Pictures/screenshots/'") end),
     awful.key({ modkey,   "Mod1" }, "l", function () awful.util.spawn_with_shell("slimlock") end),
     awful.key({ }, "XF86MonBrightnessDown", function ()
