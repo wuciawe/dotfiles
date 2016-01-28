@@ -255,11 +255,11 @@ for s = 1, screen.count() do
     myinfowibox[s] = awful.wibox({position = "bottom", screen = s})
     -- Widgets that are aligned to the bottom
     local bottom_left_layout = wibox.layout.fixed.horizontal()
-    bottom_left_layout:add(cpuicon)
-    bottom_left_layout:add(cpu)
-    bottom_left_layout:add(spacer)
     bottom_left_layout:add(memicon)
     bottom_left_layout:add(mem)
+    bottom_left_layout:add(spacer)
+    bottom_left_layout:add(cpuicon)
+    bottom_left_layout:add(cpu)
     bottom_left_layout:add(spacer)
 
     local bottom_right_layout = wibox.layout.fixed.horizontal()
@@ -295,6 +295,7 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    awful.key({ modkey, "Mod1" }, "Tab", function () awful.screen.focus_relative(1) end),
     awful.key({ }, "Print", function () awful.util.spawn_with_shell("sleep 0.5 && scrot -s -e 'mv $f ~/Pictures/screenshots/'") end),
     awful.key({ modkey,   "Mod1" }, "l", function () awful.util.spawn_with_shell("slimlock") end),
     awful.key({ }, "XF86MonBrightnessDown", function ()
