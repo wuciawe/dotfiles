@@ -102,10 +102,10 @@ tags = {
         '✣:5:Others',
     },
     layout = {
-	layouts[5], --chrome
-	layouts[5], --ide
-	layouts[5], --terminal
-	layouts[5], --multimedia
+	layouts[1], --chrome
+	layouts[1], --ide
+	layouts[1], --terminal
+	layouts[1], --multimedia
         layouts[1], --others
     }
 }
@@ -383,7 +383,11 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+    awful.key({ modkey }, "F7",
+        function(c) c.maximized_horizontal = not c.maximized_horizontal end),
+    awful.key({ modkey }, "F8",
+        function(c) c.maximized_vertical   = not c.maximized_vertical end)
 )
 
 -- Compute the maximum number of digit we need, limited to 9
@@ -459,7 +463,7 @@ awful.rules.rules = {
                      buttons = clientbuttons } },
     { rule_any = { class = {"MPlayer", "feh", "Gimp"} },
       properties = { floating = true, tag = tags[1][4], switchtotag = true, focus = true } },
-    { rule = { class = "Google-chrome-stable" },
+    { rule_any = { class = {"google-chrome", "google-chrome-stable"} },
       properties = { tag = tags[1][1], switchtotag = true, focus = true } },
     { rule = { class = "URxvt" },
       properties = { tag = tags[1][3], switchtotag = true, focus = true } },
@@ -491,7 +495,7 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = false
+    local titlebars_enabled = true
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
@@ -513,12 +517,12 @@ client.connect_signal("manage", function (c, startup)
         left_layout:buttons(buttons)
 
         -- Widgets that are aligned to the right
-        local right_layout = wibox.layout.fixed.horizontal()
-        right_layout:add(awful.titlebar.widget.floatingbutton(c))
-        right_layout:add(awful.titlebar.widget.maximizedbutton(c))
-        right_layout:add(awful.titlebar.widget.stickybutton(c))
-        right_layout:add(awful.titlebar.widget.ontopbutton(c))
-        right_layout:add(awful.titlebar.widget.closebutton(c))
+       -- local right_layout = wibox.layout.fixed.horizontal()
+       -- right_layout:add(awful.titlebar.widget.floatingbutton(c))
+       -- right_layout:add(awful.titlebar.widget.maximizedbutton(c))
+       -- right_layout:add(awful.titlebar.widget.stickybutton(c))
+       -- right_layout:add(awful.titlebar.widget.ontopbutton(c))
+       -- right_layout:add(awful.titlebar.widget.closebutton(c))
 
         -- The title goes in the middle
         local middle_layout = wibox.layout.flex.horizontal()
