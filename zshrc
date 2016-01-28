@@ -109,7 +109,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export JAVA_HOME=~/bin/java/jdk
 export SCALA_HOME=~/bin/typesafe/scala
 export SBT_HOME=~/bin/sbt
-export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$PATH
+export ACTIVATOR_HOME=~/bin/typesafe/activator
+export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$ACTIVATOR_HOME:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
