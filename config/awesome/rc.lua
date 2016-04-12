@@ -263,9 +263,9 @@ for s = 1, screen.count() do
     bottom_left_layout:add(spacer)
 
     local bottom_right_layout = wibox.layout.fixed.horizontal()
-    bottom_right_layout:add(spacer)
-    bottom_right_layout:add(wifiicon)
-    bottom_right_layout:add(wifi)
+    --bottom_right_layout:add(spacer)
+    --bottom_right_layout:add(wifiicon)
+    --bottom_right_layout:add(wifi)
     bottom_right_layout:add(spacer)
     bottom_right_layout:add(volicon)
     bottom_right_layout:add(volpct)
@@ -462,13 +462,13 @@ awful.rules.rules = {
                      raise = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
-    { rule_any = { class = {"MPlayer", "feh", "Gimp"} },
+    { rule_any = { class = {"MPlayer", "feh", "Gimp", "smplayer"} },
       properties = { floating = true, tag = tags[1][4], switchtotag = true, focus = true } },
     { rule_any = { class = {"google-chrome", "google-chrome-stable"} },
       properties = { tag = tags[1][1], switchtotag = true, focus = true } },
     { rule = { class = "URxvt" },
       properties = { tag = tags[1][3], switchtotag = true, focus = true } },
-    { rule = { class = "jetbrains-idea" },
+    { rule_any = { class = {"jetbrains-idea", "jetbrains-idea-ce"} },
       properties = { floating = true, tag = tags[1][2] } },
 }
 -- }}}

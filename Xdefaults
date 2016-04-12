@@ -10,7 +10,9 @@ URxvt.internalBorder:		3
 URxvt.lineSpace:		0
 
 URxvt.all_bold:			false
-URxvt*font:			xft:Source Code Pro:size=15:antialias=true:hinting=true
+!URxvt*font:			xft:Source Code Pro:size=15:antialias=true:hinting=true,xft:Bitstream Vera Sans:antialias=true,xft:WenQuanYi Micro Hei Mono:antialias=true,xft:Baekmuk Gulim:antialias=true
+URxvt*font:			xft:DejaVu Sans Mono:size=15:antialias=true,xft:Source Code Pro:size=15:antialias=true:hinting=true,xft:WenQuanYi Micro Hei Mono:size=15:antialias=true,xft:Baekmuk Gulim Mono:size=15:antialias=true
+!URxvt*font:			xft:DejaVu Sans Mono:size=15:antialias=true,xft:WenQuanYi Micro Hei Mono:size=15:antialias=true,xft:Baekmuk Gulim:antialias=true
 !URxvt*font:			xft:Bitstream Vera Sans Bold:size=10,xft:PowerlineSymbols
 !URxvt.font: xft:Source Code Pro Extra Light:antialias=true:hinting=true,xft:Source Code Pro Extra Light for Powerline:antialias=true:hinting=true
 Urxvt*boldFont:			xft:Source Code Pro Bold:size=15:antialias=true:hinting=true

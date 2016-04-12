@@ -55,4 +55,5 @@ fi
 # exec xterm -geometry 80x66+0+0 -name login
 
 ibus-daemon --xim -d &
+nm-applet &
 exec awesome

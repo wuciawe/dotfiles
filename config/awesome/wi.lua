@@ -181,9 +181,9 @@ vicious.register(mailwidget, vicious.widgets.gmail,
 -- End Gmail }}}
 --
 -- {{{ Start Wifi
-wifiicon = wibox.widget.imagebox()
-wifiicon:set_image(beautiful.widget_wifi)
+-- wifiicon = wibox.widget.imagebox()
+-- wifiicon:set_image(beautiful.widget_wifi)
 --
-wifi = wibox.widget.textbox()
-vicious.register(wifi, vicious.widgets.wifi, "${ssid} Rate: ${rate}MB/s Link: ${link}%", 3, "wlp2s0")
+-- wifi = wibox.widget.textbox()
+-- vicious.register(wifi, vicious.widgets.wifi, "${ssid} Rate: ${rate}MB/s Link: ${link}%", 3, "wlp2s0")
 -- End Wifi }}}

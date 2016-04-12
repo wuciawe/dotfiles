@@ -43,9 +43,9 @@ schema:
     
   name: "朙月拼音·臺灣正體"
   schema_id: luna_pinyin_tw
-  version: 0.19.custom.1181603097
+  version: 0.20.custom.1181603097
 simplifier:
-  opencc_config: zht2zhtw_v.ini
+  opencc_config: t2tw.json
   option_name: zh_tw
 speller:
   algebra:
