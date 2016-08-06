@@ -462,13 +462,13 @@ awful.rules.rules = {
                      raise = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
-    { rule_any = { class = {"MPlayer", "feh", "Gimp", "smplayer"} },
+    { rule_any = { class = {"MPlayer", "feh", "Gimp", "smplayer", "zathura", "netease-cloud-music"} },
       properties = { floating = true, tag = tags[1][4], switchtotag = true, focus = true } },
     { rule_any = { class = {"google-chrome", "google-chrome-stable"} },
       properties = { tag = tags[1][1], switchtotag = true, focus = true } },
     { rule = { class = "URxvt" },
       properties = { tag = tags[1][3], switchtotag = true, focus = true } },
-    { rule_any = { class = {"jetbrains-idea", "jetbrains-idea-ce"} },
+    { rule_any = { class = {"jetbrains-idea", "jetbrains-idea-ce", "jetbrains-clion"} },
       properties = { floating = true, tag = tags[1][2] } },
 }
 -- }}}

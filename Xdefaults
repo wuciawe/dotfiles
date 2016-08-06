@@ -60,3 +60,4 @@ URxvt.pointerBlank:		true
 
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
+

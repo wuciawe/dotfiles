@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="asoundrc profile Xdefaults zshrc bashrc vimrc xinitrc tmux.conf aria2 makepkg.conf yaourtrc"    # list of files/folders to symlink in homedir
+files="gemrc asoundrc profile Xdefaults zshrc bashrc vimrc xinitrc tmux.conf aria2 makepkg.conf yaourtrc"    # list of files/folders to symlink in homedir
 # delete asoundrc since using pulseaudio instead
 configfiles="awesome fontconfig ibus powerline"
 

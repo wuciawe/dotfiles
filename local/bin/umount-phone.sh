@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-fusermount -u phone
+fusermount -u $HOME/phone

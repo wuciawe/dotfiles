@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-simple-mtpfs phone
+simple-mtpfs $HOME/phone
