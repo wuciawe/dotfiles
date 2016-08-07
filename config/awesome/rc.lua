@@ -462,7 +462,7 @@ awful.rules.rules = {
                      raise = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
-    { rule_any = { class = {"MPlayer", "feh", "Gimp", "smplayer", "zathura", "netease-cloud-music"} },
+    { rule_any = { class = {"MPlayer", "feh", "Gimp", "zathura", "netease-cloud-music"} },
       properties = { floating = true, tag = tags[1][4], switchtotag = true, focus = true } },
     { rule_any = { class = {"google-chrome", "google-chrome-stable"} },
       properties = { tag = tags[1][1], switchtotag = true, focus = true } },
@@ -496,7 +496,7 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = true
+    local titlebars_enabled = false
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
