@@ -56,4 +56,5 @@ fi
 
 ibus-daemon --xim -d &
 nm-applet &
+xmodmap ~/.xmodmap &
 exec awesome
