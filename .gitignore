@@ -1,3 +1,5 @@
 config/ibus/bus/
 config/ibus/rime/*.bin
 config/ibus/rime/luna_pinyin.userdb/
+emacs.d/auto-save-list/
+emacs.d/elpa/
