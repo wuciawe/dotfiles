@@ -9,3 +9,6 @@
   (add-to-list 'package-archives source t))
 (package-initialize)
 
+;; Set your lisp system and, optionally, some contribs
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
