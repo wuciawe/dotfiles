@@ -49,4 +49,9 @@
 
 (load-theme 'dracula t)
 
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
+(custom-set-faces
+  '(neo-dir-link-face ((t (:foreground "color-45"))))
+  '(neo-file-link-face ((t (:foreground "white")))))
